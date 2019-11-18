@@ -1,0 +1,3 @@
+load_config
+
+( ./files/fake_hwc_saver.sh "$FAKE_HW_CLOCK_SAVE_INTERVAL" "$TMP_PATH/fake_clock" >> $MODULE_LOG_FILENAME 2>&1 ) &

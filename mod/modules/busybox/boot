@@ -1,0 +1,9 @@
+load_config
+
+mkdir -p $BUSYBOX_LINKS 2>> $MODULE_LOG_FILENAME
+mount --bind ./files/busybox /bin/busybox 2>> $MODULE_LOG_FILENAME
+/bin/busybox --install -s $BUSYBOX_LINKS 2>> $MODULE_LOG_FILENAME
+
+export PATH=$BUSYBOX_LINKS:$PATH
+
+mount --bind ./files/profile /etc/profile 2>> $MODULE_LOG_FILENAME

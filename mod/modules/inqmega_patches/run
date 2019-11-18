@@ -1,0 +1,8 @@
+load_config
+
+if [ -f $inqmega_config_backup_path/devParam.dat ]; then
+    if ! diff -q $inqmega_config_backup_path/devParam.dat /home/devParam.dat &>/dev/null; then
+        log_msg "devParam.dat are different, recovering from the SD-card!"
+        cp $inqmega_config_backup_path/devParam.dat /home/ 2>> $MODULE_LOG_FILENAME
+    fi
+fi

@@ -1,0 +1,44 @@
+127.0.0.1       localhost
+127.0.1.1       goke
+
+# INQMEGA
+127.0.0.1 arcsoft.com
+127.0.0.1 xmpp.icloseli.cn
+127.0.0.1 relaycn.arcsoftcloud.com
+127.0.0.1 update.icloseli.cn
+
+127.0.0.1 esd.icloseli.cn
+127.0.0.1 upns.icloseli.cn
+
+127.0.0.1 argus.icloseli.cn
+127.0.0.1 relay.icloseli.cn
+127.0.0.1 stun.icloseli.cn
+127.0.0.1 api.icloseli.cn
+
+127.0.0.1 xmpp.icloseli.com
+127.0.0.1 relayus-w.arcsoftcloud.com
+127.0.0.1 update.icloseli.com
+127.0.0.1 esd.icloseli.com
+127.0.0.1 upns.icloseli.com
+
+127.0.0.1 xmpp.icloseli.com
+127.0.0.1 argus.icloseli.com
+
+127.0.0.1 relay.icloseli.com
+127.0.0.1 api.icloseli.com
+
+# Wanscam K21
+127.0.0.1 l2m1.luqwid.cn
+127.0.0.1 l2m1.liqwid.cn
+127.0.0.1 l2m2.luqwid.cn
+127.0.0.1 l2m2.liqwid.cn
+127.0.0.1 l2m3.luqwid.cn
+127.0.0.1 l2m3.liqwid.cn
+127.0.0.1 l2m4.luqwid.cn
+127.0.0.1 l2m4.liqwid.cn
+127.0.0.1 pix.zscam.com
+127.0.0.1 df.zscam.com
+127.0.0.1 api.xmpush.xiaomi.com
+127.0.0.1 api.tuisong.baidu.com
+127.0.0.1 www.baidu.com
+127.0.0.1 baidu.com

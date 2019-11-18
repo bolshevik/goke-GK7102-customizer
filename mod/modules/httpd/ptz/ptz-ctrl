@@ -1,0 +1,37 @@
+#!/bin/sh
+
+BASEDIR="$( cd "$(dirname "$0")" ; pwd -P )"
+WAIT=0.3
+
+if [ $1 = "u" ];
+then
+$BASEDIR/ptz 0x65 0x14 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "d" ];
+then
+$BASEDIR/ptz 0x66 0x14 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "l" ];
+then
+$BASEDIR/ptz 0x67 0x14 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "r" ];
+then
+$BASEDIR/ptz 0x68 0x14 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "lu" ];
+then
+$BASEDIR/ptz 0x69 0x200020 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "ld" ];
+then
+$BASEDIR/ptz 0x6a 0x200020 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "ru" ];
+then
+$BASEDIR/ptz 0x6b 0x200020 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi
+if [ $1 = "rd" ];
+then
+$BASEDIR/ptz 0x6c 0x200020 && sleep $WAIT && $BASEDIR/ptz 0x64 0x14
+fi

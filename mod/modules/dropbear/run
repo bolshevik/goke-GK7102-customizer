@@ -1,0 +1,11 @@
+load_config
+
+check_boot_dependencies home_dir
+status=$?
+
+if [ $status -ne 0 ]; then
+    log_msg "Enable home_dir module in MODULES before this module"
+else
+    ./files/dropbearmulti dropbear -r ./files/dropbear_ecdsa_host_key -E >> $MODULE_LOG_FILENAME 2>&1
+fi
+

@@ -1,0 +1,2 @@
+# check also files/profile file and correct the path there if this one is changed
+BUSYBOX_LINKS=/tmp/busybox

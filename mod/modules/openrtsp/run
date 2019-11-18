@@ -1,0 +1,3 @@
+load_config
+
+(sleep $openrtsp_delay && ./files/stream_capture.sh "$openrtsp_video_path" "$openrtsp_user" "$openrtsp_pass" "$openrtsp_url" "$MODULE_LOG_FILENAME" ) &

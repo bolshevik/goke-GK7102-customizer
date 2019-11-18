@@ -1,0 +1,9 @@
+# Change to your INQMEGA mac address. Can be found with ifconfig wlan0
+# 12 hex cahracters, or 6 bytes
+MACADDR=112233445566
+# Change to your WLAN.
+WIFI_SSID=test
+WIFI_PASS=test
+
+NEW_ROOT=/tmp/root2
+LOG_PATH=/media/

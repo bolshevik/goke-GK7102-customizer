@@ -1,0 +1,3 @@
+load_config
+
+mount --bind ./files/hosts /etc/hosts 2>> $MODULE_LOG_FILENAME

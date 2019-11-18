@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JPG-Video</title>
+<style>
+body {
+    font-size: 100%;
+    font-family: Arial, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+<img id="imgLive" src="/cgi-bin/net_jpeg.cgi?ch1" />
+<script language="javascript">
+  window.onload = function() {
+    var img = document.getElementById("imgLive");
+    function updateImage() {
+      img.src = img.src.split("?")[0] + "?" + new Date().getTime();
+    }
+    setInterval(updateImage, 1000);
+  }
+</script>
+</body>
+</html>

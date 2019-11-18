@@ -1,0 +1,3 @@
+load_config
+
+mount --bind ./files/root /root 2>> $MODULE_LOG_FILENAME

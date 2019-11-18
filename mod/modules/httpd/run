@@ -1,0 +1,12 @@
+load_config
+
+check_boot_dependencies busybox
+status=$?
+
+if [ $status -ne 0 ]; then
+    log_msg "Enable busybox module in MODULES before this module"
+else
+    (httpd -p $httpd_port -h $httpd_www_root >> $MODULE_LOG_FILENAME 2>&1) &
+fi
+
+

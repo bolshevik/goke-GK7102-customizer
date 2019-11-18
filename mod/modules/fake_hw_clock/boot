@@ -1,0 +1,18 @@
+load_config
+
+NOW=`date +%Y`
+if [ "$NOW" -le "2018" ]; then
+  log_msg "Old date..."
+  if [ -f $TMP_PATH/fake_clock ]; then
+     CURRENT=`date "+%Y.%m.%d-%H:%M:%S"`
+     OLD=`cat $TMP_PATH/fake_clock`
+     log_msg "Saved date available $OLD"
+     date -s $OLD
+     NOW=`date +%Y`
+     if [ "$NOW" -le "2018" ]; then
+        log_msg "Old date is also incorrect. Recovering to $CURRENT"
+        date -s $CURRENT
+     fi
+     log_msg "Date set"
+  fi
+fi

@@ -1,0 +1,13 @@
+# List of modules to execute.
+MODULES="fake_hw_clock busybox passwd hosts home_dir dropbear httpd"
+#All modules:
+#MODULES="fake_hw_clock telnetd busybox passwd hosts home_dir dropbear ftpd openrtsp httpd"
+#Inqmega only:
+#MODULES="inqmega_patches"
+
+# Logs enabled 1 or 0
+LOG_ENABLED=1
+# With adding module name as a suffix to LOG_DISABLE_ it is possible to disable logs of a concrete module.
+#LOG_DISABLE_busybox=1
+
+# Here one can redefine any variable like LOG_PATH or TMP_PATH in main.sh

@@ -1,0 +1,5 @@
+openrtsp_user=admin
+openrtsp_pass=
+openrtsp_url="rtsp://127.0.0.1:554/0/av0"
+openrtsp_delay=60
+openrtsp_video_path=/media/Videos/

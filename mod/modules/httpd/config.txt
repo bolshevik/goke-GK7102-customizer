@@ -1,0 +1,7 @@
+httpd_port=8081
+httpd_rtsp_jpeg_path=:554/snapshot
+httpd_camera_name="IL-HIP291G-2M-AI UI"
+# Wanscam firmware:
+#httpd_rtsp_jpeg_path=/cgi-bin/net_jpeg.cgi
+#httpd_camera_name="Wanscam K21"
+httpd_www_root=./www_root/

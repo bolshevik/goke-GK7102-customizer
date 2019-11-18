@@ -1,0 +1,5 @@
+load_config
+
+mount --bind ./files/group  /etc/group  2>> $MODULE_LOG_FILENAME
+mount --bind ./files/passwd /etc/passwd 2>> $MODULE_LOG_FILENAME
+mount --bind ./files/shadow /etc/shadow 2>> $MODULE_LOG_FILENAME

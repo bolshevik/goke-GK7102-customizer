@@ -1,0 +1,11 @@
+load_config
+
+check_boot_dependencies busybox
+status=$?
+
+if [ $status -ne 0 ]; then
+    log_msg "Enable busybox module in MODULES before this module"
+else
+    (tcpsvd -E 0.0.0.0 21 ftpd -w "$ftpd_root/" >> $MODULE_LOG_FILENAME 2>&1) &
+fi
+

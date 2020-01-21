@@ -143,5 +143,8 @@ func main() {
 		configFd.Seek(0, 0)
 		configFd.Truncate(int64(unsafe.Sizeof(configuration)))
 		err = binary.Write(configFd, binary.LittleEndian, &configuration)
+		if err != nil {
+			fmt.Println(err)
+		}
 	}
 }

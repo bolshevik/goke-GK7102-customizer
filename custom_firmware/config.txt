@@ -7,3 +7,7 @@ WIFI_PASS=test
 
 NEW_ROOT=/tmp/root2
 LOG_PATH=/media/
+
+# Check the busybox module, the path should match the one configured for it (mod/modules/busybox/config.txt)
+# Full busybox is needed, the stock one is missing some needed commands
+BUSYBOX_PATH=/tmp/busybox

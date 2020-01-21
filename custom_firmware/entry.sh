@@ -4,6 +4,9 @@ BASEDIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
 source $BASEDIR/config.txt
 
+# Set path to the full busybox path
+export PATH=$BUSYBOX_PATH:$PATH
+
 # Prepare configurations if no exist. Using $BASEDIR to make sure writing to /data is prevented e.g. in bad configuration.
 if [ ! -f $BASEDIR/data/.wifi_conn_info ]; then
     echo "$MACADDR" > $BASEDIR/data/myuid.bin

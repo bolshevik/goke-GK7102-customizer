@@ -1,7 +1,7 @@
 # List of modules to execute.
-MODULES="fake_hw_clock busybox passwd hosts home_dir dropbear httpd"
+MODULES="fake_hw_clock busybox passwd hosts home_dir dropbear httpd curl"
 #All modules:
-#MODULES="fake_hw_clock telnetd busybox passwd hosts home_dir dropbear ftpd openrtsp httpd"
+#MODULES="fake_hw_clock telnetd busybox passwd hosts home_dir dropbear ftpd openrtsp httpd curl"
 #Inqmega only:
 #MODULES="inqmega_patches"
 

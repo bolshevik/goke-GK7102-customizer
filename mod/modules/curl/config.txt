@@ -1,0 +1,5 @@
+# Check that this path is in $PATH variable.
+CURL_LINKS=/tmp/busybox
+
+# Use wrapper script to supply root certificates for TLS.
+CURL_USE_WRAPPER=1

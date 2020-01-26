@@ -2,22 +2,23 @@ FILENAME=edit_config
 LDFLAGS=-ldflags="-s -w"
 BFLAGS=-trimpath
 
-all: $(FILENAME) $(FILENAME).arm
+.PHONY: all
+all: $(FILENAME).arm $(FILENAME) $(FILENAME).exe
 
 $(FILENAME): *.go
-	go build $(BFLAGS) $(LDFLAGS) -o $(FILENAME) edit_config.go
+	go build $(BFLAGS) $(LDFLAGS) -o $(FILENAME) $<
 
 $(FILENAME).arm: *.go
-	GOOS=linux GOARCH=arm GOARM=6 go build $(BFLAGS) $(LDFLAGS) -o $(FILENAME).arm edit_config.go
+	GOOS=linux GOARCH=arm GOARM=6 go build $(BFLAGS) $(LDFLAGS) -o $(FILENAME).arm $<
 
+$(FILENAME).exe: *.go
+	GOOS=windows GOARCH=amd64 go build $(BFLAGS) $(LDFLAGS) -o $(FILENAME).exe $<
+
+.PHONY: linux
 linux: export GOOS=linux
 linux: export GOARCH=amd64
 linux: $(FILENAME)
 
-windows: export GOOS=windows
-windows: export GOARCH=amd64
-windows: $(FILENAME)
-	cp $(FILENAME) $(FILENAME).exe
-
+.PHONY: clean
 clean:
-	rm $(FILENAME) $(FILENAME).arm $(FILENAME).exe
+	rm -f $(FILENAME) $(FILENAME).arm $(FILENAME).exe

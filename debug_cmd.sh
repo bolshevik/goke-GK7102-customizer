@@ -19,4 +19,4 @@ fi
 
 # Enable or disable below running of the K21 firmware.
 # Read custom_firmware/readme.md before activating it.
-#( sleep 30 && $SD_MOUNT/custom_firmware/entry.sh ) &
+#( sleep 30 && $SD_MOUNT/custom_firmware/entry.sh > $SD_MOUNT/custom_firmware.log 2>&1 ) &

@@ -1,0 +1,23 @@
+language: go
+
+go: "1.13"
+
+script:
+    - cd $TRAVIS_BUILD_DIR/tools/wanscam_wifi_config
+    - make
+    - mv edit_config.arm $TRAVIS_BUILD_DIR/custom_firmware/
+    - cd $TRAVIS_BUILD_DIR/tools/swap_bytes
+    - make swap_bytes.exe
+    - cd $TRAVIS_BUILD_DIR
+    - export VERSION=$(date +'%Y%m%d%H%M')
+    - git tag $VERSION
+    - zip -r goke-GK7102-customizer-$VERSION.zip ./*
+
+deploy:
+    provider: releases
+    api_key: "$GITHUB_RELEASES_KEY"
+    file_glob: true
+    file: goke-GK7102-customizer-*.zip
+    skip_cleanup: true
+    on:
+        branch: master

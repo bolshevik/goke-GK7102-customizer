@@ -50,6 +50,6 @@ insmod $NEW_ROOT/home/ko/timer_drv.ko
 
 # Prepare devs.
 mount -t tmpfs defaults $NEW_ROOT/dev/
-/tmp/busybox/chroot $NEW_ROOT /bin/sh /etc/init.d/S10mdev start
-/tmp/busybox/chroot $NEW_ROOT /bin/sh /etc/init.d/S11devnode start
-/tmp/busybox/chroot $NEW_ROOT /bin/sh /etc/init.d/S20urandom start
+$BUSYBOX_PATH/chroot $NEW_ROOT /bin/sh /etc/init.d/S10mdev start
+$BUSYBOX_PATH/chroot $NEW_ROOT /bin/sh /etc/init.d/S11devnode start
+$BUSYBOX_PATH/chroot $NEW_ROOT /bin/sh /etc/init.d/S20urandom start

@@ -35,7 +35,7 @@ mount --bind $BASEDIR/mods/version.ini $NEW_ROOT/home/version.ini
 # hopefully ipc should fail without these
 rm $NEW_ROOT/dev/mtd*
 
-( /tmp/busybox/chroot $NEW_ROOT /home/ipc sensortype=gc2053 > $LOG_PATH/wanscam.log 2>&1 ) &
+( $BUSYBOX_PATH/chroot $NEW_ROOT /home/ipc sensortype=gc2053 > $LOG_PATH/wanscam.log 2>&1 ) &
 
 # Stop the watchdog loop above
 ( sleep 30 && touch /tmp/watch_done ) &

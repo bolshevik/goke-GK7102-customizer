@@ -1,0 +1,18 @@
+load_config
+
+check_boot_dependencies busybox
+status=$?
+
+if [ $status -ne 0 ]; then
+    log_msg "Enable busybox module in MODULES before this module"
+else
+    mkdir -p $CURL_LINKS 2>> $MODULE_LOG_FILENAME
+
+    CURL_BASE="$( pwd -P )"
+
+    if [ "$CURL_USE_WRAPPER" == "1" ]; then
+        ln -s $CURL_BASE/files/curl_wrapper $CURL_LINKS/curl
+    else 
+        ln -s $CURL_BASE/files/curl $CURL_LINKS/curl
+    fi
+fi

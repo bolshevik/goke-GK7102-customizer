@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Configures LD path for libressl libraries and adds root CA.
+
+CURL_BASEDIR="$( cd "$(dirname "$(realpath $0)")" ; pwd -P )"
+
+export LD_LIBRARY_PATH=$CURL_BASEDIR:$LD_LIBRARY_PATH
+
+if [ -f $CURL_BASEDIR/cacert.pem ]; then
+    $CURL_BASEDIR/curl --cacert $CURL_BASEDIR/cacert.pem $@
+    exit $?
+else
+    $CURL_BASEDIR/curl $@
+    exit $?
+fi

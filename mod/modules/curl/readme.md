@@ -1,0 +1,1 @@
+Go to https://curl.haxx.se/docs/caextract.html and obtain the latest cacert.pem to correctly validate certificates.

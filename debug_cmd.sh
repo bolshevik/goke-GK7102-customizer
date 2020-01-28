@@ -15,8 +15,8 @@ fi
 [ -x $SD_MOUNT/entry.sh ] && $SD_MOUNT/entry.sh
 
 # Kill tenetd
-(while true; do sleep 10; killall telnetd; if [ $? -eq 0 ]; then break; fi; done;) &
+#(while true; do sleep 10; killall telnetd; if [ $? -eq 0 ]; then break; fi; done;) &
 
 # Enable or disable below running of the K21 firmware.
 # Read custom_firmware/readme.md before activating it.
-#( sleep 30 && $SD_MOUNT/custom_firmware/entry.sh ) &
+#( sleep 30 && $SD_MOUNT/custom_firmware/entry.sh > $SD_MOUNT/custom_firmware.log 2>&1 ) &

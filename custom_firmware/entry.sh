@@ -35,7 +35,12 @@ mount --bind $BASEDIR/mods/version.ini $NEW_ROOT/home/version.ini
 # hopefully ipc should fail without these
 rm $NEW_ROOT/dev/mtd*
 
-( $BUSYBOX_PATH/chroot $NEW_ROOT /home/ipc sensortype=gc2053 > $LOG_PATH/wanscam.log 2>&1 ) &
+# Set the fallback value and try to redetect it.
+SENSORTYPE=gc2053
+# Figure out if sensor detection is needed, it looks like it has no effect.
+#source $BASEDIR/detect_sensor.sh
+
+( $BUSYBOX_PATH/chroot $NEW_ROOT /home/ipc sensortype=$SENSORTYPE > $LOG_PATH/wanscam.log 2>&1 ) &
 
 # Stop the watchdog loop above
 ( sleep 30 && touch /tmp/watch_done ) &

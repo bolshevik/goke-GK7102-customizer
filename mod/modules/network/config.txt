@@ -1,0 +1,2 @@
+# Enalbe or disable IPv6
+IPV6_ENABLE=0
